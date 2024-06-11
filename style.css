@@ -130,3 +130,78 @@ body {
     border: 1px solid #2d79f3;
     ;
 }
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .user-navigation {
+    display: flex;
+    align-items: center;
+  }
+  
+  .username {
+    margin-right: 1rem;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #e0e0e0;
+    padding: 1rem;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+  
+  .widgets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .widget {
+    width: calc(50% - 1rem);
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  .widget h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .widget img {
+    width: 100%;
+  }
+  
