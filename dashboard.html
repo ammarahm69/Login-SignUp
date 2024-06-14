@@ -13,6 +13,7 @@
         <div class="user-navigation">
           <span class="username">Username</span>
         </div>
+        <button class="btn-logout" id="log-out">Logout</button>
       </header>
       <nav class="sidebar">
         <ul>
@@ -37,9 +38,27 @@
             <h2>Sales Performance</h2>
             <p>This month's sales: $10,000</p>
           </div>
+          </div>
         </div>
       </main>
     </div>
     <script src="app.js"></script>
+    <script>
+      window.onload = function () {
+        let isLoggedIn = localStorage.getItem("isLoggedIn");
+
+        if (isLoggedIn !== "true") {
+          alert("You must be logged in to view this page");
+          window.location.href = "index.html";
+        }
+      function logout() {
+        localStorage.setItem("isLoggedIn", "false");
+        window.location.href = "index.html";
+      }
+  
+      document.getElementById("log-out").addEventListener("click", logout);
+      };
+    </script>
+    
   </body>
 </html>

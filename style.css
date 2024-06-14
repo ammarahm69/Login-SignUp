@@ -204,4 +204,18 @@ body {
   .widget img {
     width: 100%;
   }
-  
+  .btn-logout {
+    padding: 11px 20px;
+    background-color: #0053d7;
+    color: #f5f3f3;
+    border: none;
+    font-size: 21px;
+    letter-spacing: 3px;
+    font-family: monospace;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+.btn-logout:hover{
+opacity: 0.5;
+cursor: pointer;
+}

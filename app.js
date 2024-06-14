@@ -9,10 +9,6 @@ let createAccBtn = document.getElementById("create-Account");
 //Sign Up button id get
 let signedUpBtn = document.getElementById("signed-up");
 
-//Password Show Hide functionality here
-
-
-
 //create Account Funtionality
 function createAccount() {
   if (username.value == "" || password.value == "" || phone.value == "") {

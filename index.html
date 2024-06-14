@@ -98,7 +98,16 @@
 
       function login(event) {
         event.preventDefault();
-        window.location.href = "dashboard.html";
+
+        let storedEmail = localStorage.getItem("user email");
+        let storedPassword = localStorage.getItem("user password");
+
+        if (email.value == storedEmail && password.value == storedPassword) {
+          localStorage.setItem("isLoggedIn", "true");
+          window.location.href = "dashboard.html";
+        } else {
+          alert("Invalid email or password");
+        }
       }
 
       signedUpBtn.addEventListener("click", login);
