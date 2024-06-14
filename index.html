@@ -101,16 +101,29 @@
 
         let storedEmail = localStorage.getItem("user email");
         let storedPassword = localStorage.getItem("user password");
+        let storedusername = localStorage.getItem("user name");
 
         if (email.value == storedEmail && password.value == storedPassword) {
           localStorage.setItem("isLoggedIn", "true");
-          window.location.href = "dashboard.html";
+          Swal.fire({
+            title: "Logged In",
+            text: `Thanks for logging in ${storedusername}`,
+            icon: "success",
+          });
+          setInterval(function () {
+            window.location.href = "dashboard.html";
+          }, 2500);
         } else {
-          alert("Invalid email or password");
+          Swal.fire({
+            title: "Sorry",
+            text: `Invalid Username or Password`,
+            icon: "error",
+          });
         }
       }
 
       signedUpBtn.addEventListener("click", login);
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

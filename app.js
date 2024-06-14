@@ -12,17 +12,20 @@ let signedUpBtn = document.getElementById("signed-up");
 //create Account Funtionality
 function createAccount() {
   if (username.value == "" || password.value == "" || phone.value == "") {
-    alert("Please fill all to  create an Account");
+    Swal.fire("Please create an account to access dashboard");
     localStorage.setItem("user name", false);
     localStorage.setItem("user email", false);
     localStorage.setItem("user password", false);
     localStorage.setItem("user phone number", false);
   } else {
-    alert("Account Created");
+    Swal.fire("Account created sucessfully");
     localStorage.setItem("user name", username.value);
     localStorage.setItem("user email", email.value);
     localStorage.setItem("user password", password.value);
     localStorage.setItem("user phone number", phone.value);
-    window.location.href = "index.html";
+  
+    setInterval(function () {
+      window.location.href = "index.html";
+    }, 1000);
   }
 }

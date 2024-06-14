@@ -219,3 +219,6 @@ body {
 opacity: 0.5;
 cursor: pointer;
 }
+.swal2-title{
+  font-size: 18px !important;
+}
